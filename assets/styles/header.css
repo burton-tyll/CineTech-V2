@@ -1,0 +1,57 @@
+/*-------------------HEADER----------------------*/
+#logo_header{
+    width: 8vw ;
+  }
+  
+  @media (min-width: 1025px){
+    .container-fluid{
+      height: 10vh;
+  }
+  }
+  
+  @media (max-width: 769px){
+    #logo_header{
+      width: 15vw;
+    }
+     .navbar{
+      min-height: 20vh ;
+     }
+  }
+  
+  @media (max-width: 426px){
+    #logo_header{
+      width: 25vw;
+    }
+  }
+  
+  
+  .navbar{
+    position: sticky;
+    --bs-navbar-brand-margin-end: 70vw;
+  }
+  
+  @media (max-width:1440px){
+    .navbar{
+      --bs-navbar-brand-margin-end: 70vw;
+    }
+  }
+  
+  @media (max-width:1024px){
+    .navbar{
+      --bs-navbar-brand-margin-end: 61vw;
+    }
+  }
+  
+  @media (max-width:767px){
+    .navbar{
+      --bs-navbar-brand-margin-end: 30vw;
+    }
+  }
+  
+  .text-bg-danger{
+    background-color: #BF222F !important;
+  }
+  
+  header a:hover{
+    color: #212529;
+  }
