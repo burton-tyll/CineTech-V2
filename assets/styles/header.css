@@ -1,6 +1,11 @@
 /*-------------------HEADER----------------------*/
+
+header nav{
+    height: 130px;
+}
+
 #logo_header{
-    width: 8vw ;
+    width: 7vw ;
   }
   
   @media (min-width: 1025px){

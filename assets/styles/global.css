@@ -8,3 +8,134 @@ main{
     background-color: var(--background-color);
     color: var(--text-color);
 }
+
+  .moviesContainer{
+    padding: 50px;
+  }
+
+  /*----------------------------------*/
+  /*-------------- Styles des grid --------------*/
+  /*----------------------------------*/
+  .movie-grid{
+    display: grid;
+    grid-template-columns: repeat(6, 250px);
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /*----------------------------------*/
+  /*-------------- Styles des posters de film --------------*/
+  /*----------------------------------*/
+  
+  /* Définit la taille et la forme des posters */
+  .movie_poster {
+    width: 250px;
+    height: 375px;
+    border-radius: 5px;
+    margin-top: 0;
+    position: relative; /* Ajout de position relative pour contenir les informations */
+  }
+  
+  /* Anime le poster lorsqu'il est survolé */
+  .movie_poster:hover {
+    transition: margin-top 0.5s ease; /* Ajoute une transition fluide */
+    margin-top: -15px; /* Décale légèrement vers le haut */
+    cursor: pointer;
+  }
+  
+  /* Styles de l'image du poster */
+  .movie_poster img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+  }
+  
+  
+  /*----------------------------------*/
+  /*-------------- Styles des informations sur les films --------------*/
+  /*----------------------------------*/
+  
+  /* Définit le conteneur des informations */
+  .infos {
+    position: absolute; /* Position absolue par rapport au parent */
+    width: 250px; /* Largeur fixe */
+    color: white; /* Couleur du texte */
+    background-color: rgba(95, 98, 95, 0.804); /* Couleur de fond */
+    backdrop-filter: blur(5px); /* Applique un flou à l'arrière-plan */
+    height: 0; /* Hauteur initiale (cachée) */
+    overflow: hidden; /* Masque le contenu qui dépasse */
+    transition: height 0.5s ease; /* Ajoute une transition fluide */
+    border-radius: 5px; /* Coins arrondis */
+    bottom: 0; /* Positionne les informations en bas */
+    left: 0; /* Positionne les informations à gauche */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Styles du titre des informations */
+  .infos_title {
+    text-align: center; /* Centre le texte */
+    overflow: hidden; /* Masque le texte qui dépasse */
+    -webkit-line-clamp: 2; /* Limite le nombre de lignes à 2 */
+    -webkit-box-orient: vertical; /* Alignement vertical */
+    display: -webkit-box; /* Utilise un conteneur flexible */
+  }
+  
+  /* Styles du titre h2 des informations */
+  .infos_title h2 {
+    font-size: 20px; /* Taille de la police */
+    margin: 10px 0; /* Marge supérieure et inférieure */
+  }
+  
+  /* Affiche les informations lorsque le poster est survolé */
+  .movie_poster:hover .infos {
+    height: 375px; /* Dévoile les informations */
+  }
+
+    /*----------------------------------*/
+  /*-------------- Styles du synopsis des films --------------*/
+  /*----------------------------------*/
+  
+  /* Ajoute du rembourrage et masque le texte qui dépasse */
+  .infos_synopsis {
+    padding: 5px;
+    overflow: hidden;
+    -webkit-line-clamp: 8; /* Limite le nombre de lignes à 8 */
+    -webkit-box-orient: vertical; /* Alignement vertical */
+    display: -webkit-box; /* Utilise un conteneur flexible */
+  }
+  
+  /* Styles pour le bouton de suggestion */
+  .suggest {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: blueviolet;
+    width: 100%;
+  }
+
+   /*----------------------------------*/
+  /*-------------- Styles de la pagination --------------*/
+  /*----------------------------------*/
+
+  .pagination{
+    display: flex;
+    margin-top: 15px;
+    justify-content: center;
+    --bs-pagination-active-bg: red !important;
+    --bs-pagination-hover-bg: red !important;
+    --bs-pagination-hover-color: white !important;
+}
+
+.page-item, .page-link{
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #1F1F1F !important;
+    color: white !important;
+    border: none !important;
+}

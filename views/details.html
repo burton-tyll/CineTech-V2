@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails du Film</title>
+    <!--INCLUDES-->
+    <script src="/assets/scripts/includes.js"></script>
+    <div data-include="head.html"></div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!---Head Spécifique--->
+    <script type="module" src="/controllers/DetailsController.js" defer></script>
+    <style>
+
+.detailsContainer {
+    display: flex;
+    background: #302e2e;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    min-height: calc(100svh - 130px);
+}
+
+.movie-poster {
+    flex: 1;
+}
+
+.movie-poster img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.movie-info {
+    flex: 2;
+    padding-left: 20px;
+}
+
+.movie-info h2 {
+    margin-top: 0;
+}
+
+.comments-section {
+    margin-top: 20px;
+}
+
+.comments-display {
+    margin-top: 10px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
+.comments-display p {
+    background: #e7e7e7;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #333;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div data-include="header.html"></div>
+    </header>
+    <main>
+        <section>
+            <div class="detailsContainer">
+                <div class="movie-poster">
+                    <img id="details_picture" src="" alt="Titre du Film">
+                </div>
+                <div class="movie-info">
+                    <h2 id="details_title">Titre du Film: **Aventure Épique**</h2>
+                    <p><strong>Date de Sortie:</strong> <span id="details_releaseDate"></span></p>
+                    <p><strong>Durée:</strong> 120 minutes</p>
+                    <p><strong>Genre:</strong> <span id="details_genres">Aventure, Action</span></p>
+                    <p><strong>Note:</strong> ⭐⭐⭐⭐ (4/5)</p>
+                    <p><strong>Synopsis:</strong></p>
+                    <p>Dans un monde fantastique, un groupe de héros se lance dans une quête épique pour sauver leur royaume des ténèbres. Ils devront affronter des monstres redoutables, résoudre des énigmes anciennes, et découvrir le pouvoir de l'amitié.</p>
+            
+                    <h3>Cast:</h3>
+                    <ul>
+                        <li>Acteur 1: Jean Dupont</li>
+                        <li>Acteur 2: Marie Curie</li>
+                        <li>Acteur 3: Pierre Martin</li>
+                    </ul>
+                    <h3>Commentaires:</h3>
+                    <div class="comments-section">
+                        <textarea placeholder="Laissez un commentaire..." id="comment-input"></textarea>
+                        <button id="submit-comment">Envoyer</button>
+                        <div class="comments-display">
+                            <!-- Les commentaires seront affichés ici -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,21 @@
+/*--MOVIE Carousel--*/
+.movie_carousel{
+    display: flex;
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.movie_poster:hover{
+    margin-top: 0;
+}
+
+.gs_news_carousel{
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+    scrollbar-width: initial;
+}
+
+.scrollable::-webkit-scrollbar {
+    display: none; /* Masque la scrollbar sur Chrome, Safari et Edge */
+}

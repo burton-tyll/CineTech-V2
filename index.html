@@ -4,15 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CineTech</title>
+    <!--INCLUDES-->
     <script src="/assets/scripts/includes.js"></script>
     <div data-include="head.html"></div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!---Head Spécifique--->
+    <link rel="stylesheet" href="/assets/styles/slider.css">
+    <link rel="stylesheet" href="/assets/styles/carousel.css">
+    <script type="module" src="/assets/scripts/carousel.js" defer></script>
+    <script type="module" src="/assets/scripts/slider.js" defer></script>
+    <script type="module" src="/controllers/IndexController.js" defer></script>
 </head>
 <body>
     <header>
         <div data-include="header.html"></div>
     </header>
     <main>
-        
+        <div class="gs_slider">
+            <img id="slider_poster" class="gs_slider_poster" src="/img/slide1.jpg" alt="film">
+            <button class="gs_arrow gs_arrow_left" id="previous">
+                <img src="/assets/img/arrow_left.svg" alt="précédent">
+            </button>
+            <button class="gs_arrow gs_arrow_right" id="next">
+                <img src="/assets/img/arrow_right.svg" alt="suivant">
+            </button>
+        </div>
+
+        <section id="mostPopular">
+            <h1>Les plus populaires</h1>
+            <div class="gs_news_carousel scrollable">
+                <button class="gs_arrow gs_arrow_left gs_news_leftButton"><img src="/assets/img/arrow_left.svg" alt="précédent"></button>
+                <button class="gs_arrow gs_arrow_right gs_news_rightButton"><img src="/assets/img/arrow_right.svg" alt="précédent"></button>
+                <div class="movie_carousel">
+
+                </div>
+            </div>
+        </section>
+
+        <section id="animation">
+            <h1>Films d'animation</h1>
+            <div class="gs_news_carousel scrollable">
+                <button class="gs_arrow gs_arrow_left gs_news_leftButton"><img src="/assets/img/arrow_left.svg" alt="précédent"></button>
+                <button class="gs_arrow gs_arrow_right gs_news_rightButton"><img src="/assets/img/arrow_right.svg" alt="précédent"></button>
+                <div class="movie_carousel">
+
+                </div>
+            </div>
+        </section>
     </main>
 </body>
 </html>
