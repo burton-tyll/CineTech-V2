@@ -10,64 +10,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <!---Head Spécifique--->
     <script type="module" src="/controllers/DetailsController.js" defer></script>
-    <style>
-
-.detailsContainer {
-    display: flex;
-    background: #302e2e;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    min-height: calc(100svh - 130px);
-}
-
-.movie-poster {
-    flex: 1;
-}
-
-.movie-poster img {
-    max-width: 100%;
-    border-radius: 5px;
-}
-
-.movie-info {
-    flex: 2;
-    padding-left: 20px;
-}
-
-.movie-info h2 {
-    margin-top: 0;
-}
-
-.comments-section {
-    margin-top: 20px;
-}
-
-.comments-display {
-    margin-top: 10px;
-    border-top: 1px solid #ccc;
-    padding-top: 10px;
-}
-
-.comments-display p {
-    background: #e7e7e7;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-footer {
-    text-align: center;
-    padding: 20px 0;
-    background: #333;
-    color: #fff;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-    </style>
+    <link rel="stylesheet" href="/assets/styles/details.css">
 </head>
 <body>
     <header>
@@ -80,26 +23,21 @@ footer {
                     <img id="details_picture" src="" alt="Titre du Film">
                 </div>
                 <div class="movie-info">
-                    <h2 id="details_title">Titre du Film: **Aventure Épique**</h2>
+                    <div class="d-flex justify-content-between">
+                        <h2 id="details_title">Titre</h2> <button id="favoriteButton">
+                            <svg class="" width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                        </button>
+                    </div>
                     <p><strong>Date de Sortie:</strong> <span id="details_releaseDate"></span></p>
                     <p><strong>Durée:</strong> 120 minutes</p>
                     <p><strong>Genre:</strong> <span id="details_genres">Aventure, Action</span></p>
                     <p><strong>Note:</strong> ⭐⭐⭐⭐ (4/5)</p>
                     <p><strong>Synopsis:</strong></p>
-                    <p>Dans un monde fantastique, un groupe de héros se lance dans une quête épique pour sauver leur royaume des ténèbres. Ils devront affronter des monstres redoutables, résoudre des énigmes anciennes, et découvrir le pouvoir de l'amitié.</p>
-            
-                    <h3>Cast:</h3>
-                    <ul>
-                        <li>Acteur 1: Jean Dupont</li>
-                        <li>Acteur 2: Marie Curie</li>
-                        <li>Acteur 3: Pierre Martin</li>
-                    </ul>
+                    <p id="details_overview"></p>
                     <h3>Commentaires:</h3>
                     <div class="comments-section">
-                        <textarea placeholder="Laissez un commentaire..." id="comment-input"></textarea>
-                        <button id="submit-comment">Envoyer</button>
-                        <div class="comments-display">
-                            <!-- Les commentaires seront affichés ici -->
+                        <div class="comments-display" id="details_comments">
+                           
                         </div>
                     </div>
                 </div>

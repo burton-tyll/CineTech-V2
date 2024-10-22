@@ -2,14 +2,13 @@
 .gs_slider{
     display: flex;
     flex-direction: column;
-    height: 40svh;
+    height: 60svh;
     justify-content: center;
-    overflow-y: hidden;
 }
 
 .gs_slider_poster{
     width: 100%;
-    height: 170%;
+    height: 100%;
 }
 
 .gs_slider_video{

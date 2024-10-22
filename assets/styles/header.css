@@ -1,7 +1,8 @@
 /*-------------------HEADER----------------------*/
 
-header nav{
-    height: 130px;
+header{
+    max-height: 10%;
+    box-sizing: border-box;
 }
 
 #logo_header{

@@ -1,12 +1,18 @@
 :root{
     --background-color: #212529;
-    --primary-color: ;
+    --primary-color: #DC3545;
     --text-color: white;
+}
+
+html, body{
+    height: 100%;
 }
 
 main{
     background-color: var(--background-color);
     color: var(--text-color);
+    min-height: calc(100svh - 10svh);
+    padding-top: 20px;
 }
 
   .moviesContainer{
